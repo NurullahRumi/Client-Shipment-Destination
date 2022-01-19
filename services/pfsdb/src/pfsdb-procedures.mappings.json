@@ -1,0 +1,1580 @@
+{
+  "ProcRF2000PK0_OCLOVGetCalcTotalLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_CALCTOTALLOV(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutCalcTotalLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetCalcMethodLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_CALCMETHODLOV(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "p_Out_CalcMethodLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetCurrencyLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_CurrencyLOV(?, upper(?), ?, ?,                                                ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFCountry",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MAU",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pTCountry",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutCurrencyLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetFreightTermsLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_FREIGHT(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutFreightLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTInsFreightDetails" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_ins_FreightDetails(?, upper(?),?, \n                                                ?, ?,\n                                                ?,?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "BGD",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdest",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MILTON KEYNES",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pForwardern",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "NA",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pContainerTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "40HC",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTUpdClientShp" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_upd_ClientShp(?, upper(?), ?, \n                                           ?, ?, ?,\n                                           ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W03",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClient",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ALLSAINT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSeqNr",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "3",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightTerm",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdest",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "LEEDS",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "BGD",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTInsCostDetails" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_ins_CostDetails(?, upper(?), ?, ?,                                                    ?, ?, ?, ?,                                                  ?, ?, ?, ?,\n                                             ?, ?, ?, \n                                             ?, ?, ?,\n                                             ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "BGD",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pForwardern",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdest",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DONNA CLAIRE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pItemcat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pItemdes",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Air Freight15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pContainerTpy",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "NA",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyUOM",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "KG",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyFrom",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "0",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyTo",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "500",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcMethod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "VOLWGT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurrencyCod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "RS",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurPerUnit",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "50.60",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightSts",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "C",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurperitem",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4.6",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcPercent",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4.2",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcSubTotalTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CARTAGE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSubtotalTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "null",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTGetCostDetails" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_CostDetails(?, upper(?), ?, ?,                                                    ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MAU",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutCostDetails",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetAllLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_AllLOV(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutAllLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetItemCatLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_ITEMCATLOV(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutItemCatLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_ORLOVGetCligrp" : {
+    "procedureString" : "CALL RF2000PK0_ORLOV.sproc_get_rft100_cligrp(upper(?), ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "OC1000W01",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "D00030",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutCligrpLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetShpDestLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_SHPDESTLOV(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutShpDestLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_ORLOVGetOrdCtycodLOV" : {
+    "procedureString" : "CALL RF2000PK0_ORLOV.sproc_get_ordctycodLOV(upper(?), ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutOrderCtycodLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTDelFreightDetails" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_del_FreightDetails(?, upper(?), ?, ?,                                             ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "BGD",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ZAF",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetAllCountryLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft120_allctycodLOV(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutCtycodLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTUpdCostDetails" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_upd_CostDetails(?, upper(?), ?, ?,\n                                             ?, ?, ?, \n                                             ?, ?, ?, ?,\n\t\t\t\t\t\t\t\t\t\t\t ?, ?, ?, ?,  \n\t\t\t\t\t\t\t\t\t\t\t ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "BGD",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShptyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightseqnr",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pItemdes",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Air Freight USE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcmethod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "VOLWGT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyUom",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "KG",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurperunit",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "9.5",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurperitem",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "10.3",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurrency",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyfrom",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "0",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyto",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1000",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcpercent",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalctotal",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CARTAGE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSubtotal",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CARTAGE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSortseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTCancelCostDetails" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_del_CostDetails(?, upper(?), ?, ?,                                                    ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MDG",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShptyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightseqnr",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1001",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTGetClientShp" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_ClientShp(?, upper(?), ?, ?, \n                                           ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCligrp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ALLSAINT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClient",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ALLSAINT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightTerm",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutClientShp",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTGetFreightTerm" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_FreightTerm(?, upper(?), ?, \n                                             ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightTerm",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpitemcat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AFRT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutFreightTerm",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetShpTypLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_SHPTYPLOV(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutShptypLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetShpContLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_SHPCONTLOV(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutShpContLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTDelClientShp" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_del_ClientShp(?, upper(?), ?, \n                                                          ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClient",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ALLSAINT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSeqNr",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightTerm",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTGetAllLOV" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_AllLOVDetails(?, upper(?), ?, ?,                                                 ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pItemcod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OCT500FCUR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFCountry",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MAU",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pTCountry",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutAllLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTGetFreightDetails" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_FreightDetails(?, upper(?), ?, ?,                                             ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MAU",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShptyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutFreightDetails",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTGetLOVTitle" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_LOVTitle(?, upper(?), ?, \n                                          ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pLOVfld",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OCT500SHPTYP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPromptType",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "PFS",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutLOVTitle",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetQtyUomLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_QTYUOMLOV(?, upper(?), ?,                                                          ? )",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcMethod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CARTON",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutQtyUomLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOC1000PK0_FREIGHTInsClientShp" : {
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_ins_ClientShp(?, upper(?), ?,\n                                           ?, ?, ?,\n                                           ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClient",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ALLSAINT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightTerm",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFromCounty",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MDG",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdest",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MILTON KEYNES",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetShpTypCostLOV" : {
+    "procedureString" : "CALL  RF2000PK0_OCLOV.sproc_get_rft850_SHPTYPCOSTLOV(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "xxxx",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d009",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "p_Out_ShptypcostLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetClicodLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft100_clicodLOV(?, upper(?), ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W03",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCligrp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "TOPSHOP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutClientLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcRF2000PK0_OCLOVGetAllShpDestLOV" : {
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_AllSHPDESTLOV(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutAllShpDestLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  }
+}

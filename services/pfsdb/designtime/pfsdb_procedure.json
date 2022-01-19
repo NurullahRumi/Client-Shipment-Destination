@@ -1,0 +1,2941 @@
+{
+  "ProcOC1000PK0_FREIGHTCancelCostDetails" : {
+    "name" : "ProcOC1000PK0_FREIGHTCancelCostDetails",
+    "description" : "To update freightsts to C (cancel )",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_del_CostDetails(:pPrgId, upper(:pUsrid), :pCtycod, :pShptyp,                                                    :pFreightseqnr)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MDG",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShptyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightseqnr",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1001",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "ProcOC1000PK0_FREIGHTDelClientShp" : {
+    "name" : "ProcOC1000PK0_FREIGHTDelClientShp",
+    "description" : "To delete a selected row",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_del_ClientShp(:pPrgId, upper(:pUsrid), :pClient, \n                                                          :pSeqNr, :pFreightTerm)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClient",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ALLSAINT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSeqNr",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightTerm",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "ProcOC1000PK0_FREIGHTDelFreightDetails" : {
+    "name" : "ProcOC1000PK0_FREIGHTDelFreightDetails",
+    "description" : "To delete freight details row",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_del_FreightDetails(:pPrgId, upper(:pUsrid), :pCtycod, :pShpdestctycod,                                             :pShpseq)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "BGD",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ZAF",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "ProcOC1000PK0_FREIGHTGetAllLOV" : {
+    "name" : "ProcOC1000PK0_FREIGHTGetAllLOV",
+    "description" : "To fetch all LOVs",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_AllLOVDetails(:pPrgId, upper(:pUsrid), :pItemcod, :pFCountry,                                                 :pTCountry, :pOutAllLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pItemcod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OCT500FCUR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFCountry",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MAU",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pTCountry",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutAllLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetAllLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutAllLOV",
+        "fieldName" : "poutAllLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetAllLovResponsePoutAllLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "LOVDES",
+            "fieldName" : "lovdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES",
+            "fieldName" : "itemdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES2",
+            "fieldName" : "itemdes2",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES3",
+            "fieldName" : "itemdes3",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "DETAILDES",
+            "fieldName" : "detaildes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcOC1000PK0_FREIGHTGetClientShp" : {
+    "name" : "ProcOC1000PK0_FREIGHTGetClientShp",
+    "description" : "To fetch detail for client and shpdest",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_ClientShp(:pPrgId, upper(:pUsrid), :pCligrp, :pClient, \n                                           :pFreightTerm, :pOutClientShp)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCligrp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ALLSAINT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClient",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ALLSAINT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightTerm",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutClientShp",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetClientShpResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutClientShp",
+        "fieldName" : "poutClientShp",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetClientShpResponsePoutClientShp",
+          "list" : true,
+          "properties" : [ {
+            "name" : "CLIGRP",
+            "fieldName" : "cligrp",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CLICOD",
+            "fieldName" : "clicod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SEQNR",
+            "fieldName" : "seqnr",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "FREIGHT_TERM",
+            "fieldName" : "freightTerm",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SRCCTYCOD",
+            "fieldName" : "srcctycod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPDEST",
+            "fieldName" : "shpdest",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPDESTCTYCOD",
+            "fieldName" : "shpdestctycod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "MODID",
+            "fieldName" : "modid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "MODDAT",
+            "fieldName" : "moddat",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.time.LocalDateTime",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcOC1000PK0_FREIGHTGetCostDetails" : {
+    "name" : "ProcOC1000PK0_FREIGHTGetCostDetails",
+    "description" : "To get Cost and  Freight Details",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_CostDetails(:pPrgId, upper(:pUsrid), :pCtycod, :pShpTyp,                                                    :pShpdestctycod, :pOutCostDetails)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MAU",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutCostDetails",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetCostDetailsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutCostDetails",
+        "fieldName" : "poutCostDetails",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetCostDetailsResponsePoutCostDetails",
+          "list" : true,
+          "properties" : [ {
+            "name" : "CTYCOD",
+            "fieldName" : "ctycod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPTYP",
+            "fieldName" : "shptyp",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FREIGHTSEQNR",
+            "fieldName" : "freightseqnr",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "FORWARDERN",
+            "fieldName" : "forwardern",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPDEST",
+            "fieldName" : "shpdest",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMCAT",
+            "fieldName" : "itemcat",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES",
+            "fieldName" : "itemdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CONTAINER_TYPE",
+            "fieldName" : "containerType",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "QTYUOM",
+            "fieldName" : "qtyuom",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "QTYUOM2",
+            "fieldName" : "qtyuom2",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "QTYFROM",
+            "fieldName" : "qtyfrom",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "QTYTO",
+            "fieldName" : "qtyto",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "CALCMETHOD",
+            "fieldName" : "calcmethod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CCYCOD",
+            "fieldName" : "ccycod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CURPERUNIT",
+            "fieldName" : "curperunit",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "MODID",
+            "fieldName" : "modid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "MODDAT",
+            "fieldName" : "moddat",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.time.LocalDateTime",
+              "list" : false
+            }
+          }, {
+            "name" : "FREIGHTSTS",
+            "fieldName" : "freightsts",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPDESTCTYCOD",
+            "fieldName" : "shpdestctycod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CURPERITEM_MINIMUM",
+            "fieldName" : "curperitemMinimum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "CALC_PERCENT",
+            "fieldName" : "calcPercent",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "CALC_SUBTOTALTYP",
+            "fieldName" : "calcSubtotaltyp",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SUBTOTALTYP",
+            "fieldName" : "subtotaltyp",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SORTSEQ",
+            "fieldName" : "sortseq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcOC1000PK0_FREIGHTGetFreightDetails" : {
+    "name" : "ProcOC1000PK0_FREIGHTGetFreightDetails",
+    "description" : "To get Freight Details",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_FreightDetails(:pPrgId, upper(:pUsrid), :pCtycod, :pShpdestctycod,                                             :pShptyp, :pOutFreightDetails)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MAU",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShptyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutFreightDetails",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetFreightDetailsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutFreightDetails",
+        "fieldName" : "poutFreightDetails",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetFreightDetailsResponsePoutFreightDetails",
+          "list" : true,
+          "properties" : [ {
+            "name" : "CTYCOD",
+            "fieldName" : "ctycod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPDESTCTYCOD",
+            "fieldName" : "shpdestctycod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPSEQ",
+            "fieldName" : "shpseq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPTYP",
+            "fieldName" : "shptyp",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPDEST",
+            "fieldName" : "shpdest",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FORWARDERN",
+            "fieldName" : "forwardern",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CONTAINER_TYPE",
+            "fieldName" : "containerType",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcOC1000PK0_FREIGHTGetFreightTerm" : {
+    "name" : "ProcOC1000PK0_FREIGHTGetFreightTerm",
+    "description" : "To get freight term details",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_FreightTerm(:pPrgId, upper(:pUsrid), :pFreightTerm, \n                                             :pShpitemcat, :pOutFreightTerm)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightTerm",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpitemcat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AFRT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutFreightTerm",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetFreightTermResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutFreightTerm",
+        "fieldName" : "poutFreightTerm",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetFreightTermResponsePoutFreightTerm",
+          "list" : true,
+          "properties" : [ {
+            "name" : "FREIGHT_TERM",
+            "fieldName" : "freightTerm",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPITEMCAT",
+            "fieldName" : "shpitemcat",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPITEMDES",
+            "fieldName" : "shpitemdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcOC1000PK0_FREIGHTGetLOVTitle" : {
+    "name" : "ProcOC1000PK0_FREIGHTGetLOVTitle",
+    "description" : "To get LOV Title",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_get_LOVTitle(:pPrgId, upper(:pUsrid), :pLOVfld, \n                                          :pPromptType, :pOutLOVTitle)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pLOVfld",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OCT500SHPTYP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPromptType",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "PFS",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutLOVTitle",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetLovtitleResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutLOVTitle",
+        "fieldName" : "poutLovtitle",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetLovtitleResponsePoutLovtitle",
+          "list" : true,
+          "properties" : [ {
+            "name" : "PROMPT_TYPE",
+            "fieldName" : "promptType",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "LOVFLD",
+            "fieldName" : "lovfld",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "COL_ITEMDES2_PROMPT",
+            "fieldName" : "colItemdes2Prompt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "COL_STS_PROMPT",
+            "fieldName" : "colStsPrompt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "COL_ITEMDES_PROMPT",
+            "fieldName" : "colItemdesPrompt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "COL_ITEMACCESS_PROMPT",
+            "fieldName" : "colItemaccessPrompt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "COL_LOVDES_PROMPT",
+            "fieldName" : "colLovdesPrompt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "COL_TAB_PROMPT",
+            "fieldName" : "colTabPrompt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "COL_LOVFLD_PROMPT",
+            "fieldName" : "colLovfldPrompt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "COL_ITEMDES3_PROMPT",
+            "fieldName" : "colItemdes3Prompt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "COL_DETAILDES_PROMPT",
+            "fieldName" : "colDetaildesPrompt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "COL_ITEMCOD_PROMPT",
+            "fieldName" : "colItemcodPrompt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcOC1000PK0_FREIGHTInsClientShp" : {
+    "name" : "ProcOC1000PK0_FREIGHTInsClientShp",
+    "description" : "To insert Client shipment",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_ins_ClientShp(:pPrgId, upper(:pUsrid), :pClient,\n                                           :pFreightTerm, :pFromCounty, :pShpdest,\n                                           :pShpdestctycod)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClient",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ALLSAINT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightTerm",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFromCounty",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MDG",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdest",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MILTON KEYNES",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "ProcOC1000PK0_FREIGHTInsCostDetails" : {
+    "name" : "ProcOC1000PK0_FREIGHTInsCostDetails",
+    "description" : "To insert new cost and freight details",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_ins_CostDetails(:pPrgId, upper(:pUsrid), :pCtycod, :pShpTyp,                                                    :pForwardern, :pShpdest, :pItemcat, :pItemdes,                                                  :pContainerTpy, :pQtyUOM, :pQtyFrom, :pQtyTo,\n                                             :pCalcMethod, :pCurrencyCod, :pCurPerUnit, \n                                             :pFreightSts, :pShpdestctycod, :pCurperitem,\n                                             :pCalcPercent, :pCalcSubTotalTyp, :pSubtotalTyp)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "BGD",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pForwardern",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdest",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DONNA CLAIRE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pItemcat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pItemdes",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Air Freight15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pContainerTpy",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "NA",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyUOM",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "KG",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyFrom",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "0",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyTo",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "500",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcMethod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "VOLWGT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurrencyCod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "RS",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurPerUnit",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "50.60",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightSts",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "C",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurperitem",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4.6",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcPercent",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4.2",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcSubTotalTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CARTAGE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSubtotalTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "null",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "ProcOC1000PK0_FREIGHTInsFreightDetails" : {
+    "name" : "ProcOC1000PK0_FREIGHTInsFreightDetails",
+    "description" : "To insert a new Freight Details",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_ins_FreightDetails(:pPrgId, upper(:pUsrid),:pCtycod, \n                                                :pShpdestctycod, :pShpTyp,\n                                                :pShpdest,:pForwardern, :pContainerTyp)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "BGD",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdest",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MILTON KEYNES",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pForwardern",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "NA",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pContainerTyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "40HC",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "ProcOC1000PK0_FREIGHTUpdClientShp" : {
+    "name" : "ProcOC1000PK0_FREIGHTUpdClientShp",
+    "description" : "To update client shipment",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_upd_ClientShp(:pPrgId, upper(:pUsrid), :pClient, \n                                           :pSeqNr, :pFreightTerm, :pShpdest,\n                                           :pShpdestctycod)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W03",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClient",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ALLSAINT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSeqNr",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "3",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightTerm",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DAP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdest",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "LEEDS",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "BGD",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "ProcOC1000PK0_FREIGHTUpdCostDetails" : {
+    "name" : "ProcOC1000PK0_FREIGHTUpdCostDetails",
+    "description" : "To update freight and cost details",
+    "version" : "V2",
+    "procedureString" : "CALL OC1000PK0_FREIGHT.sproc_upd_CostDetails(:pPrgId, upper(:pUsrid), :pCtycod, :pShptyp,\n                                             :pFreightseqnr, :pShpdestctycod, :pItemdes, \n                                             :pCalcmethod, :pQtyUom, :pCurperunit, :pCurperitem,\n\t\t\t\t\t\t\t\t\t\t\t :pCurrency, :pQtyfrom, :pQtyto, :pCalcpercent,  \n\t\t\t\t\t\t\t\t\t\t\t :pCalctotal, :pSubtotal, :pSortseq)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCtycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "BGD",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShptyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "AIR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFreightseqnr",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpdestctycod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pItemdes",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Air Freight USE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcmethod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "VOLWGT",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyUom",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "KG",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurperunit",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "9.5",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurperitem",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "10.3",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCurrency",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyfrom",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "0",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pQtyto",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1000",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcpercent",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalctotal",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CARTAGE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSubtotal",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CARTAGE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSortseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetAllCountryLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetAllCountryLOV",
+    "description" : "To fetch all country code",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft120_allctycodLOV(:pPrgId, upper(:pUsrid), :pOutCtycodLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutCtycodLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetAllCountryLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutCtycodLOV",
+        "fieldName" : "poutCtycodLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetAllCountryLovResponsePoutCtycodLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "CTYCOD",
+            "fieldName" : "ctycod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetAllLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetAllLOV",
+    "description" : "To fetch LOV",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_AllLOV(:pPrgId, upper(:pUsrid), :pOutAllLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutAllLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetAllLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutAllLOV",
+        "fieldName" : "poutAllLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetAllLovResponsePoutAllLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ALLLOV",
+            "fieldName" : "alllov",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "LOVDES",
+            "fieldName" : "lovdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetAllShpDestLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetAllShpDestLOV",
+    "description" : "To fetch all shipment destination + %",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_AllSHPDESTLOV(:pPrgId, upper(:pUsrid), :pOutAllShpDestLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutAllShpDestLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetAllShpDestLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutAllShpDestLOV",
+        "fieldName" : "poutAllShpDestLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetAllShpDestLovResponsePoutAllShpDestLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ALLSHPDESTCOD",
+            "fieldName" : "allshpdestcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetCalcMethodLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetCalcMethodLOV",
+    "description" : "To fetch Calculation Method",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_CALCMETHODLOV(:pPrgId, upper(:pUsrid), :p_Out_CalcMethodLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "p_Out_CalcMethodLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetCalcMethodLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "p_Out_CalcMethodLOV",
+        "fieldName" : "poutCalcMethodLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetCalcMethodLovResponsePoutCalcMethodLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "CALCMETHOD",
+            "fieldName" : "calcmethod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "QTYUOM",
+            "fieldName" : "qtyuom",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetCalcTotalLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetCalcTotalLOV",
+    "description" : "To fetch Calculation total",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_CALCTOTALLOV(:pPrgId, upper(:pUsrid), :pOutCalcTotalLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutCalcTotalLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetCalcTotalLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutCalcTotalLOV",
+        "fieldName" : "poutCalcTotalLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetCalcTotalLovResponsePoutCalcTotalLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "CALCTOTAL",
+            "fieldName" : "calctotal",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetClicodLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetClicodLOV",
+    "description" : "To get client LOV filter by cligrp",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft100_clicodLOV(:pPrgid, upper(:pUsrid), :pCligrp, :poutClientLOV)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W03",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCligrp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "TOPSHOP",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutClientLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetClicodLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutClientLOV",
+        "fieldName" : "poutClientLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetClicodLovResponsePoutClientLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "CLICOD",
+            "fieldName" : "clicod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetCurrencyLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetCurrencyLOV",
+    "description" : "To fetch currency lov",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_CurrencyLOV(:pPrgId, upper(:pUsrid), :pFCountry, :pTCountry,                                                :pOutCurrencyLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFCountry",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MAU",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pTCountry",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GBR",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutCurrencyLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetCurrencyLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutCurrencyLOV",
+        "fieldName" : "poutCurrencyLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetCurrencyLovResponsePoutCurrencyLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "CURRENCY",
+            "fieldName" : "currency",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetFreightTermsLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetFreightTermsLOV",
+    "description" : "To get freight terms LOV",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_FREIGHT(:pPrgId, upper(:pUsrid), :pOutFreightLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutFreightLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetFreightTermsLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutFreightLOV",
+        "fieldName" : "poutFreightLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetFreightTermsLovResponsePoutFreightLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "FREIGHTTERM",
+            "fieldName" : "freightterm",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetItemCatLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetItemCatLOV",
+    "description" : "To fetch Item cat",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_ITEMCATLOV(:pPrgId, upper(:pUsrid), :pOutItemCatLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutItemCatLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetItemCatLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutItemCatLOV",
+        "fieldName" : "poutItemCatLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetItemCatLovResponsePoutItemCatLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCAT",
+            "fieldName" : "itemcat",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetQtyUomLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetQtyUomLOV",
+    "description" : "To fetch quantity UOM",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_QTYUOMLOV(:pPrgId, upper(:pUsrid), :pCalcMethod,                                                          :pOutQtyUomLOV )",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCalcMethod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CARTON",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutQtyUomLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetQtyUomLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutQtyUomLOV",
+        "fieldName" : "poutQtyUomLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetQtyUomLovResponsePoutQtyUomLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "QTYUOM",
+            "fieldName" : "qtyuom",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "RANGEHIDE",
+            "fieldName" : "rangehide",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "PERCENTAGEHIDE",
+            "fieldName" : "percentagehide",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetShpContLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetShpContLOV",
+    "description" : "To fetch shipment container type",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_SHPCONTLOV(:pPrgId, upper(:pUsrid), :pOutShpContLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutShpContLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetShpContLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutShpContLOV",
+        "fieldName" : "poutShpContLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetShpContLovResponsePoutShpContLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "SHPCONTCOD",
+            "fieldName" : "shpcontcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetShpDestLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetShpDestLOV",
+    "description" : "To fetch shipment destination",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_SHPDESTLOV(:pPrgId, upper(:pUsrid), :pOutShpDestLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutShpDestLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetShpDestLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutShpDestLOV",
+        "fieldName" : "poutShpDestLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetShpDestLovResponsePoutShpDestLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "SHPDESTCOD",
+            "fieldName" : "shpdestcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetShpTypCostLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetShpTypCostLOV",
+    "description" : "ProcRF2000PK0_OCLOVGetShpTypCostLOV",
+    "version" : "V2",
+    "procedureString" : "CALL  RF2000PK0_OCLOV.sproc_get_rft850_SHPTYPCOSTLOV(:pPrgId, upper(:pUsrid), :p_Out_ShptypcostLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "xxxx",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d009",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "p_Out_ShptypcostLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetShpTypCostLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "p_Out_ShptypcostLOV",
+        "fieldName" : "poutShptypcostLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetShpTypCostLovResponsePoutShptypcostLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "SHPTYPCOST",
+            "fieldName" : "shptypcost",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_OCLOVGetShpTypLOV" : {
+    "name" : "ProcRF2000PK0_OCLOVGetShpTypLOV",
+    "description" : "To fetch Shipment type",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_OCLOV.sproc_get_rft850_SHPTYPLOV(:pPrgId, upper(:pUsrid), :pOutShptypLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutShptypLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetShpTypLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutShptypLOV",
+        "fieldName" : "poutShptypLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetShpTypLovResponsePoutShptypLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "SHPTYPCOD",
+            "fieldName" : "shptypcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_ORLOVGetCligrp" : {
+    "name" : "ProcRF2000PK0_ORLOVGetCligrp",
+    "description" : "To get Client grp LOV",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_ORLOV.sproc_get_rft100_cligrp(upper(:pUsrid), :pPrgid, :pOutCligrpLOV)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "OC1000W01",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "D00030",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutCligrpLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OrlovgetCligrpResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutCligrpLOV",
+        "fieldName" : "poutCligrpLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OrlovgetCligrpResponsePoutCligrpLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "CLIGRP",
+            "fieldName" : "cligrp",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcRF2000PK0_ORLOVGetOrdCtycodLOV" : {
+    "name" : "ProcRF2000PK0_ORLOVGetOrdCtycodLOV",
+    "description" : "To get country LOV",
+    "version" : "V2",
+    "procedureString" : "CALL RF2000PK0_ORLOV.sproc_get_ordctycodLOV(upper(:pUsrid), :pPrgid, :pOutOrderCtycodLOV)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OC1000W01",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutOrderCtycodLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OrlovgetOrdCtycodLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutOrderCtycodLOV",
+        "fieldName" : "poutOrderCtycodLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OrlovgetOrdCtycodLovResponsePoutOrderCtycodLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}

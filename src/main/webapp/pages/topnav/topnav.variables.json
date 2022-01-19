@@ -1,0 +1,28 @@
+{
+  "statMenu" : {
+    "_id" : "wm-statMenu-wm.Variable-1533965135773",
+    "name" : "statMenu",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "Sortseq" : "1",
+      "Name" : "Freight Standard Cost",
+      "Action" : "Variables.goToPage_FreightStandardCost.invoke()",
+      "ItemRole" : "FREIGHT_VIEW_PAGE"
+    }, {
+      "Sortseq" : "2",
+      "Name" : "Client Shipment Destination",
+      "Action" : "Variables.goToPage_ClientShipmentDestination.invoke()",
+      "ItemRole" : "CLIENT_VIEW_PAGE"
+    }, {
+      "Sortseq" : "3",
+      "Name" : "List Of Values",
+      "Action" : "Variables.goToPage_ListOfValues.invoke()",
+      "ItemRole" : "LOV_VIEW_PAGE"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "statPrgid" : {
+    "_id" : "wm-statPrgId-wm.Variable-1533646110871",
+    "name" : "statPrgid",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "OC1000W03",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : "OC1000W03"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statPrgName" : {
+    "_id" : "wm-statPrgName-wm.Variable-1533646140497",
+    "name" : "statPrgName",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "List Of Values",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : "List Of Values"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "svOC1000PK0_FREIGHTGetAllLOV" : {
+    "_id" : "wm-svOC1000PK0_FREIGHTGetAllLOV-wm.ServiceVariable-1533646056348",
+    "name" : "svOC1000PK0_FREIGHTGetAllLOV",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgId",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pItemcod",
+      "value" : "bind:Widgets.selectLOV.datavalue.alllov",
+      "type" : "string"
+    }, {
+      "target" : "pFCountry",
+      "value" : "bind:Widgets.selectFromCountryLOV.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pTCountry",
+      "value" : "bind:Widgets.searchToDestCountryLOV.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetAllLovResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcOC1000PK0_FREIGHTGetAllLOV",
+    "operationId" : "ProcedureExecutionController_executeProcOC1000PK0_FREIGHTGetAllLOV",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOC1000PK0_FREIGHTGetLOVTitle" : {
+    "_id" : "wm-svOC1000PK0_FREIGHTGetLOVTitle-wm.ServiceVariable-1533713909420",
+    "name" : "svOC1000PK0_FREIGHTGetLOVTitle",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgId",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pLOVfld",
+      "value" : "bind:Widgets.selectLOV.datavalue.alllov",
+      "type" : "string"
+    }, {
+      "target" : "pPromptType",
+      "value" : "PFS",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOc1000pk0FreightgetLovtitleResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcOC1000PK0_FREIGHTGetLOVTitle",
+    "operationId" : "ProcedureExecutionController_executeProcOC1000PK0_FREIGHTGetLOVTitle",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svRF2000PK0_OCLOVGetAllLOV" : {
+    "_id" : "wm-svRF2000PK0_OCLOVGetAllLOV-wm.ServiceVariable-1533646263232",
+    "name" : "svRF2000PK0_OCLOVGetAllLOV",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgId",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcRf2000pk0OclovgetAllLovResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcRF2000PK0_OCLOVGetAllLOV",
+    "operationId" : "ProcedureExecutionController_executeProcRF2000PK0_OCLOVGetAllLOV",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  }
+}

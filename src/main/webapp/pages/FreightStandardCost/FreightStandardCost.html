@@ -1,0 +1,691 @@
+<wm-page name="page1" data-ng-controller="FreightStandardCostPageController" pagetitle="Freight Standard Cost"> 
+    <wm-header name="header1" content="header"> 
+        <wm-param name="pTitle" value="bind:Variables.statPrgName.dataSet.dataValue" type="string"></wm-param> 
+    </wm-header> 
+    <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav> 
+    <wm-content height="1200" name="content1"> 
+        <wm-page-content name="page_content1" columnwidth="12"> 
+            <wm-tabs name="tabs1"> 
+                <wm-tabpane show="true" on-select="tabpaneFreightDetailSelect($event, $scope)" title="Shipment Matrix" tabindex="2" name="tabpaneFreightDetail"> 
+                    <wm-layoutgrid name="layoutgrid1"> 
+                        <wm-gridrow name="gridrow23_2"> 
+                            <wm-gridcolumn padding="5px unset unset unset" name="gridcolumn50_1" columnwidth="11"> 
+                                <wm-panel collapsible="true" class="panel-primary" name="panelFreightDetails" iconclass="" autoclose="outsideClick" title="Shipment Matrix"> 
+                                    <wm-form postmessage="" class="panel-info" name="formFreightQuery" captionalign="left" dataset="bind:Variables.svOC1000PK0_FREIGHTGetFreightDetails.dataSet" method="get" errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded"> 
+                                        <wm-layoutgrid name="layoutgrid19" columns="1"> 
+                                            <wm-gridrow name="gridrow48"> 
+                                                <wm-gridcolumn name="gridcolumn111_2" columnwidth="3"> 
+                                                    <wm-form-field orderby="itemcod:asc" displayfield="itemcod" datafield="itemcod" dataset="bind:Variables.svRF2000PK0_ORLOVGetOrdCtycodLOV.dataSet.poutOrderCtycodLov" width="auto" height="25" margin="unset unset unset 8px" placeholder="" readonly="false" displayname="From Country :" key="pCtycod" type="string" show="true" widget="select" name="selectFromCountryQuery"></wm-form-field> 
+                                                </wm-gridcolumn> 
+                                                <wm-gridcolumn name="gridcolumn115_1" columnwidth="3"> 
+                                                    <wm-form-field orderby="ctycod:asc" datafield="ctycod" displaylabel="ctycod" dataset="bind:Variables.svRF2000PK0_OCLOVGetAllCountryLOV.dataSet.poutCtycodLov" width="auto" placeholder="Type ..." readonly="false" displayname="To Country Destination :" key="pShpdestctycod" type="string" show="true" widget="autocomplete" name="searchToDestCountryQuery"></wm-form-field> 
+                                                </wm-gridcolumn> 
+                                                <wm-gridcolumn name="gridcolumn116_1" columnwidth="3"> 
+                                                    <wm-form-field orderby="shptypcod:asc" displayfield="shptypcod" datafield="shptypcod" dataset="bind:Variables.svRF2000PK0_OCLOVGetShpTypLOV.dataSet.poutShptypLov" height="25" width="auto" margin="unset unset unset 8px" placeholder="" readonly="false" displayname="Shipment Type  :" key="pShptyp" type="string" show="true" widget="select" name="selectShptypQuery"></wm-form-field> 
+                                                </wm-gridcolumn> 
+                                                <wm-gridcolumn name="gridcolumn114_1" columnwidth="3"> 
+                                                    <wm-buttongroup padding="20px unset unset unset" name="buttongroup9" horizontalalign="right" class="form-action col-md-12"> 
+                                                        <wm-button name="btnQueryFreight" on-click="btnQueryFreightClick($event, $scope)" fontweight="bold" iconclass="wi wi-search" caption="Query" type="button" class="btn-primary"></wm-button> 
+                                                        <wm-button name="btnResetQueryFreight" fontweight="bold" on-click="btnResetQueryFreightClick($event, $scope)" caption="Reset" type="button" class="btn-warning"></wm-button> 
+                                                    </wm-buttongroup> 
+                                                </wm-gridcolumn> 
+                                            </wm-gridrow> 
+                                            <wm-gridrow name="gridrow49"> 
+                                                <wm-gridcolumn name="gridcolumn117" columnwidth="9"> 
+                                                    <wm-container name="containerHideLabelFreight"> 
+                                                        <wm-label caption="bind:Widgets.formFreightQuery.formWidgets.selectFromCountryQuery.datavalue
+" name="lbltxtFromCountry" padding="unset 0.5em"></wm-label> 
+                                                        <wm-label caption="bind:Widgets.formFreightQuery.formWidgets.searchToDestCountryQuery.datavalue
+
+" name="lbltxtToCountry" padding="unset 0.5em"></wm-label> 
+                                                        <wm-label caption="bind:Widgets.formFreightQuery.formWidgets.selectShptypQuery.datavalue" name="lbltxtShpTyp" padding="unset 0.5em"></wm-label> 
+                                                    </wm-container> 
+                                                </wm-gridcolumn> 
+                                            </wm-gridrow> 
+                                        </wm-layoutgrid> 
+                                    </wm-form> 
+                                </wm-panel> 
+                            </wm-gridcolumn> 
+                        </wm-gridrow> 
+                        <wm-gridrow name="gridrow2"> 
+                            <wm-gridcolumn name="gridcolumn3" columnwidth="11"> 
+                                <wm-table gridfirstrowselect="false" filtermode="multicolumn" pagesize="12" class="panel-primary" showrecordcount="true" navigationalign="center" spacing="condensed" name="gridFreightDetails" navigation="Classic" dataset="bind:Variables.svOC1000PK0_FREIGHTGetFreightDetails.dataSet.poutFreightDetails" title=""> 
+                                    <wm-table-column rowactionsposition="0" show="true" searchable="false" sortable="false" readonly="true" type="custom" edit-widget-type="text" width="40px" caption="Delete" binding="rowOperations"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" searchable="false" type="integer" edit-widget-type="number" width="70px" caption="Shipment Seq" binding="shpseq"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="70px" caption="From  Country" binding="ctycod"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="80px" caption="To Destination Country" binding="shpdestctycod"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="70px" caption="Shipment Type" binding="shptyp"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="100px" caption="Shipment Destination" binding="shpdest"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="70px" caption="Container Type" binding="containerType"></wm-table-column> 
+                                    <wm-table-action widget-type="button" disabled="false" shortcutkey="" accessroles="FREIGHT_SHIPMENT_CREATE" action="Widgets.dialogInsertFreightDetails.open()" title="New" iconclass="wi wi-plus" class="btn-primary" show="true" display-name="New" key="addNewRow"></wm-table-action> 
+                                    <wm-table-row-action disabled="false" accessroles="FREIGHT_SHIPMENT_DEL" action="Widgets.confirmdialogFreightDelete.open()" title="Delete" iconclass="wi wi-trash" class="btn-primary" show="true" display-name="" key="deleterow"></wm-table-row-action> 
+                                </wm-table> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn name="gridcolumn58_2" columnwidth="1"></wm-gridcolumn> 
+                        </wm-gridrow> 
+                    </wm-layoutgrid> 
+                </wm-tabpane> 
+                <wm-tabpane on-select="tabpaneFeightDetailCostSelect($event, $scope)" title="Freight and Cost Details" tabindex="3" name="tabpaneFeightDetailCost"> 
+                    <wm-layoutgrid name="layoutgrid5"> 
+                        <wm-gridrow name="gridrow26"> 
+                            <wm-gridcolumn padding="5px unset unset unset" name="gridcolumn56_1" columnwidth="12"> 
+                                <wm-panel collapsible="true" class="panel-primary" name="panelCostDetails" iconclass="" autoclose="outsideClick" title="Freight Details and Cost"> 
+                                    <wm-form postmessage="" class="panel-info" name="formCostQuery" captionalign="left" dataset="bind:Variables.svOC1000PK0_FREIGHTGetCostDetails.dataSet" method="get" errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded"> 
+                                        <wm-layoutgrid name="layoutgrid19_1" columns="1"> 
+                                            <wm-gridrow name="gridrow48_1"> 
+                                                <wm-gridcolumn name="gridcolumn111_3" columnwidth="3"> 
+                                                    <wm-form-field orderby="itemcod:asc" displayfield="itemcod" datafield="itemcod" dataset="bind:Variables.svRF2000PK0_ORLOVGetOrdCtycodLOV.dataSet.poutOrderCtycodLov" width="auto" height="25" margin="unset unset unset 8px" placeholder="" readonly="false" displayname="From Country :" key="pCtycod" type="string" show="true" widget="select" name="selectFromCountryCost"></wm-form-field> 
+                                                </wm-gridcolumn> 
+                                                <wm-gridcolumn name="gridcolumn114_2" columnwidth="3"> 
+                                                    <wm-form-field orderby="ctycod:asc" datafield="ctycod" displaylabel="ctycod" dataset="bind:Variables.svRF2000PK0_OCLOVGetAllCountryLOV.dataSet.poutCtycodLov" width="auto" placeholder="Type ..." readonly="false" displayname="To Country Destination :" key="pShpdestctycod" type="string" show="true" widget="autocomplete" name="searchToDestCountryCost"></wm-form-field> 
+                                                </wm-gridcolumn> 
+                                                <wm-gridcolumn name="gridcolumn115_2" columnwidth="3"> 
+                                                    <wm-form-field orderby="shptypcod:asc,shptypcost:asc" displayfield="shptypcost" datafield="shptypcost" dataset="bind:Variables.svRF2000PK0_OCLOVGetShpTypCostLOV.dataSet.poutShptypcostLov" height="25" width="auto" margin="unset unset unset 8px" placeholder="" readonly="false" displayname="Shipment Type  Cost Breakdown:" key="pShpTyp" type="string" show="true" widget="select" name="selectShptyp"></wm-form-field> 
+                                                </wm-gridcolumn> 
+                                                <wm-gridcolumn padding="20px unset unset unset" name="gridcolumn116_2" columnwidth="3"> 
+                                                    <wm-buttongroup name="buttongroup4" horizontalalign="right" class="form-action col-md-12"> 
+                                                        <wm-button fontweight="bold" on-click="btnQueryCostClick($event, $scope)" iconclass="wi wi-search" name="btnQueryCost" caption="Query" type="button" class="btn-primary"></wm-button> 
+                                                        <wm-button fontweight="bold" on-click="btnResetQueryCostClick($event, $scope)" name="btnResetQueryCost" caption="Reset" type="button" class="btn-warning"></wm-button> 
+                                                    </wm-buttongroup> 
+                                                </wm-gridcolumn> 
+                                            </wm-gridrow> 
+                                            <wm-gridrow name="gridrow48_2"> 
+                                                <wm-gridcolumn name="gridcolumn115_3" columnwidth="9"> 
+                                                    <wm-container name="containerHideLabelCost"> 
+                                                        <wm-label caption="bind:Widgets.formCostQuery.formWidgets.selectFromCountryCost.datavalue
+" name="lbltxtFromCountryCost" padding="unset 0.5em"></wm-label> 
+                                                        <wm-label caption="bind:Widgets.formCostQuery.formWidgets.searchToDestCountryCost.datavalue
+" name="lbltxtToCountryCost" padding="unset 0.5em"></wm-label> 
+                                                        <wm-label caption="bind:Widgets.formCostQuery.formWidgets.selectShptyp.datavalue" name="lbltxtShpTypCost" padding="unset 0.5em"></wm-label> 
+                                                    </wm-container> 
+                                                </wm-gridcolumn> 
+                                            </wm-gridrow> 
+                                        </wm-layoutgrid> 
+                                    </wm-form> 
+                                </wm-panel> 
+                            </wm-gridcolumn> 
+                        </wm-gridrow> 
+                        <wm-gridrow name="gridrow14_1"> 
+                            <wm-gridcolumn name="gridcolumn26_1" columnwidth="12"> 
+                                <wm-table on-datarender="gridCostDetailsDatarender($scope, $data)" width="100%" filtermode="multicolumn" pagesize="12" showrecordcount="true" navigationalign="center" spacing="condensed" class="panel-primary" name="gridCostDetails" navigation="Classic" dataset="bind:Variables.svOC1000PK0_FREIGHTGetCostDetails.dataSet.poutCostDetails" title=""> 
+                                    <wm-table-column rowactionsposition="0" show="true" searchable="false" sortable="false" readonly="true" type="custom" edit-widget-type="text" width="90px" caption="Edit / Delete" binding="rowOperations"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" searchable="false" type="integer" edit-widget-type="number" width="32px" caption="Seq" binding="sortseq"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="integer" edit-widget-type="number" width="70px" caption="Freight ID" binding="freightseqnr"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="60px" caption="From Country" binding="ctycod"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="2%" caption="To Destination Country" binding="shpdestctycod"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="5%" caption="Shipment Destination" binding="shpdest"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="2%" caption="Shipment Type" binding="shptyp"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="2%" caption="Container Type" binding="containerType"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="70px" caption="Item Category" binding="itemcat"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="20%" caption="Item Description" binding="itemdes"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="60px" caption="Freight Status" binding="freightsts"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="120px" caption="Calculation Method" binding="calcmethod"></wm-table-column> 
+                                    <wm-table-column-group col-class="theme-b1" caption="Item Cost" name="group3"> 
+                                        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="7%" caption="Quantity UOM" binding="qtyuom2"></wm-table-column> 
+                                        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="70px" caption="Currency" binding="ccycod"></wm-table-column> 
+                                        <wm-table-column readonly="false" show="true" searchable="false" fractionsize="2" formatpattern="numberToString" type="double" edit-widget-type="number" textalignment="right" width="5%" caption="Charges Per UOM (CUR)" binding="curperunit"></wm-table-column> 
+                                        <wm-table-column readonly="false" show="true" searchable="false" fractionsize="2" formatpattern="numberToString" type="double" edit-widget-type="number" textalignment="right" width="5%" caption="Minimum Charge for Item (CUR)" binding="curperitemMinimum"></wm-table-column> 
+                                    </wm-table-column-group> 
+                                    <wm-table-column-group col-class="theme-b2" caption="Quantity Range" name="group1"> 
+                                        <wm-table-column readonly="false" show="true" searchable="false" fractionsize="0" formatpattern="numberToString" type="double" edit-widget-type="number" textalignment="right" width="5%" caption="From" binding="qtyfrom"></wm-table-column> 
+                                        <wm-table-column readonly="false" show="true" searchable="false" fractionsize="0" formatpattern="numberToString" type="double" edit-widget-type="number" textalignment="right" width="5%" caption="To" binding="qtyto"></wm-table-column> 
+                                        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="7%" caption="UOM" binding="qtyuom"></wm-table-column> 
+                                    </wm-table-column-group> 
+                                    <wm-table-column-group col-class="theme-b3" caption="Percentage Calculation" name="group2"> 
+                                        <wm-table-column readonly="false" show="true" searchable="false" fractionsize="2" formatpattern="numberToString" type="double" edit-widget-type="number" textalignment="right" width="100px" caption="Calculation Percentage(%)" binding="calcPercent"></wm-table-column> 
+                                        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" textalignment="center" width="5%" caption="Base on Sub Total" binding="calcSubtotaltyp"></wm-table-column> 
+                                        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" textalignment="center" width="5%" caption="Use Item in Sub Total Calculation" binding="subtotaltyp"></wm-table-column> 
+                                    </wm-table-column-group> 
+                                    <wm-table-column-group col-class="theme-b4" caption="Last Updated By/On" name="group"> 
+                                        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="7%" caption="" binding="modid"></wm-table-column> 
+                                        <wm-table-column readonly="false" show="true" type="datetime" edit-widget-type="datetime" width="7%" caption="" binding="moddat"></wm-table-column> 
+                                    </wm-table-column-group> 
+                                    <wm-table-action widget-type="button" disabled="false" shortcutkey="" accessroles="FREIGHT_COST_CREATE" action="addNewRowAction($event)" title="New" iconclass="wi wi-plus" class="btn-primary" show="true" display-name="New" key="addNewRow"></wm-table-action> 
+                                    <wm-table-row-action disabled="false" accessroles="FREIGHT_COST_UPD" action="updaterowAction($event)" title="Edit" iconclass="wi wi-pencil" class="btn-primary" show="true" display-name="" key="updaterow"></wm-table-row-action> 
+                                    <wm-table-row-action disabled="false" accessroles="FREIGHT_COST_CANCEL" action="Widgets.confirmdialogCostDelete.open()" title="Delete" iconclass="wi wi-trash" class="btn-primary" show="true" display-name="" key="deleterow"></wm-table-row-action> 
+                                </wm-table> 
+                            </wm-gridcolumn> 
+                        </wm-gridrow> 
+                    </wm-layoutgrid> 
+                </wm-tabpane> 
+                <wm-tabpane on-select="tabpaneFreighTermsSelect($event, $scope)" title="Freight Terms" name="tabpaneFreighTerms"> 
+                    <wm-layoutgrid name="layoutgrid17_1"> 
+                        <wm-gridrow name="gridrow45"> 
+                            <wm-gridcolumn padding="10px unset unset unset" name="gridcolumn105" columnwidth="8"> 
+                                <wm-panel collapsible="true" class="panel-primary" name="panelFreightTerms" iconclass="" autoclose="outsideClick" title="Freight Term"> 
+                                    <wm-form postmessage="" class="panel-info" name="formFreightTerm" captionalign="left" dataset="bind:Variables.svOC1000PK0_FREIGHTGetFreightTerm.dataSet" method="get" errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded"> 
+                                        <wm-layoutgrid name="layoutgrid18" columns="1"> 
+                                            <wm-gridrow name="gridrow47_1"> 
+                                                <wm-gridcolumn name="gridcolumn108_1" columnwidth="4"> 
+                                                    <wm-composite name="composite18"> 
+                                                        <wm-label padding="5px unset unset unset" width="auto" caption="Freight Term :" name="lblFreightTerm" class="col-md-3 control-label"></wm-label> 
+                                                        <wm-container width="auto" name="container23" class="col-md-9"> 
+                                                            <wm-select height="25" width="auto" orderby="freightterm:asc" displayfield="freightterm" datafield="freightterm" dataset="bind:Variables.svRF2000PK0_OCLOVGetFreightTermsLOV.dataSet.poutFreightLov" name="selectFreighTerm"></wm-select> 
+                                                        </wm-container> 
+                                                    </wm-composite> 
+                                                </wm-gridcolumn> 
+                                                <wm-gridcolumn name="gridcolumn110_1" columnwidth="5"> 
+                                                    <wm-composite name="composite19"> 
+                                                        <wm-label padding="5px unset unset unset" width="auto" caption="Shipment Item Category :" name="lblShpItemCat" class="col-md-3 control-label"></wm-label> 
+                                                        <wm-container width="auto" name="container24" class="col-md-9"> 
+                                                            <wm-select height="25" width="auto" orderby="itemcat:asc" displayfield="itemcat" datafield="itemcat" dataset="bind:Variables.svRF2000PK0_OCLOVGetItemCatLOV.dataSet.poutItemCatLov" name="selectShpItemCat"></wm-select> 
+                                                        </wm-container> 
+                                                    </wm-composite> 
+                                                </wm-gridcolumn> 
+                                                <wm-gridcolumn name="gridcolumn111_1" columnwidth="3"> 
+                                                    <wm-buttongroup name="buttongroup7" horizontalalign="right" class="form-action col-md-12"> 
+                                                        <wm-button on-click="btnQueryTermsClick($event, $scope)" iconclass="wi wi-search" name="btnQueryTerms" caption="Search" type="button" class="btn-primary"></wm-button> 
+                                                        <wm-button on-click="btnResetQueryTermsClick($event, $scope)" name="btnResetQueryTerms" caption="Reset" type="button" class="btn-warning"></wm-button> 
+                                                    </wm-buttongroup> 
+                                                </wm-gridcolumn> 
+                                            </wm-gridrow> 
+                                        </wm-layoutgrid> 
+                                    </wm-form> 
+                                </wm-panel> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn name="gridcolumn112_1" columnwidth="4"></wm-gridcolumn> 
+                        </wm-gridrow> 
+                        <wm-gridrow name="gridrow46"> 
+                            <wm-gridcolumn name="gridcolumn107" columnwidth="8"> 
+                                <wm-table pagesize="12" class="panel-primary" spacing="condensed" navigationalign="center" showrecordcount="true" name="gridFreigthTerm" navigation="Classic" dataset="bind:Variables.svOC1000PK0_FREIGHTGetFreightTerm.dataSet.poutFreightTerm" title=""> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="50px" caption="Freight Term" binding="freightTerm"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="50px" caption="Shipment Item Category" binding="shpitemcat"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="70px" caption="Shipment Item Description" binding="shpitemdes"></wm-table-column> 
+                                </wm-table> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn name="gridcolumn113_1" columnwidth="4"></wm-gridcolumn> 
+                        </wm-gridrow> 
+                    </wm-layoutgrid> 
+                </wm-tabpane> 
+                <wm-tabpane show="false" on-select="tabpaneLOVSelect($event, $scope)" on-load="tabpaneLOVLoad($event, $scope)" title="List of Values References" name="tabpaneLOV"> 
+                    <wm-layoutgrid name="layoutgrid12"> 
+                        <wm-gridrow name="gridrow33_2"> 
+                            <wm-gridcolumn padding="5px unset unset unset" name="gridcolumn76_2" columnwidth="6"> 
+                                <wm-panel collapsible="true" class="panel-primary" name="panelLOV" iconclass="" autoclose="outsideClick" title="List of Value Filter"> 
+                                    <wm-panel class="panel-info" name="panel4" iconclass="" autoclose="outsideClick" title=""> 
+                                        <wm-layoutgrid name="layoutgrid14"> 
+                                            <wm-gridrow name="gridrow36"> 
+                                                <wm-gridcolumn name="gridcolumn81" columnwidth="5"> 
+                                                    <wm-composite name="composite15_1"> 
+                                                        <wm-label width="100" caption="List of Value :" name="lblLOV" class="col-md-3 control-label"></wm-label> 
+                                                        <wm-container width="auto" name="container17" class="col-md-9"> 
+                                                            <wm-select height="25" width="auto" orderby="lovdes:asc,alllov:desc" displayfield="lovdes" datafield="All Fields" dataset="bind:Variables.svRF2000PK0_OCLOVGetAllLOV.dataSet.poutAllLov" name="selectLOV"></wm-select> 
+                                                        </wm-container> 
+                                                    </wm-composite> 
+                                                </wm-gridcolumn> 
+                                                <wm-gridcolumn name="gridcolumn86" columnwidth="6"> 
+                                                    <wm-buttongroup name="buttongroup5" horizontalalign="right" class="form-action col-md-12"> 
+                                                        <wm-button fontweight="bold" on-click="btnQueryLOVClick($event, $scope)" iconclass="wi wi-search" tabindex="1" name="btnQueryLOV" caption="Query" type="button" class="btn-primary"></wm-button> 
+                                                        <wm-button fontweight="bold" on-click="btnRestLOVClick($event, $scope)" name="btnRestLOV" caption="Reset" type="button" class="btn-secondary"></wm-button> 
+                                                    </wm-buttongroup> 
+                                                </wm-gridcolumn> 
+                                                <wm-gridcolumn name="gridcolumn82_1" columnwidth="1"> 
+                                                    <wm-container show="true" name="containerHideFromTo"> 
+                                                        <wm-layoutgrid name="layoutgrid17"> 
+                                                            <wm-gridrow name="gridrow47"> 
+                                                                <wm-gridcolumn name="gridcolumn111" columnwidth="5"> 
+                                                                    <wm-composite name="composite16"> 
+                                                                        <wm-label width="100" caption="From Country :" name="lblFromCountryLOV" class="col-md-3 control-label"></wm-label> 
+                                                                        <wm-container width="auto" name="container18" class="col-md-9"> 
+                                                                            <wm-select orderby="itemcod:asc" datafield="itemcod" dataset="bind:Variables.svRF2000PK0_ORLOVGetOrdCtycodLOV.dataSet.poutOrderCtycodLov" height="25" width="auto" name="selectFromCountryLOV"></wm-select> 
+                                                                        </wm-container> 
+                                                                    </wm-composite> 
+                                                                </wm-gridcolumn> 
+                                                                <wm-gridcolumn name="gridcolumn112" columnwidth="7"> 
+                                                                    <wm-composite name="composite17"> 
+                                                                        <wm-label width="150" caption="To Destination Country :" name="lblToDestCountryLOV" class="col-md-3 control-label"></wm-label> 
+                                                                        <wm-container width="auto" name="container19" class="col-md-9"> 
+                                                                            <wm-search orderby="ctycod:asc" datafield="ctycod" displaylabel="ctycod" dataset="bind:Variables.svRF2000PK0_OCLOVGetAllCountryLOV.dataSet.poutCtycodLov" width="auto" height="25" placeholder="Type ..." type="autocomplete" name="searchToDestCountryLOV"></wm-search> 
+                                                                        </wm-container> 
+                                                                    </wm-composite> 
+                                                                </wm-gridcolumn> 
+                                                            </wm-gridrow> 
+                                                        </wm-layoutgrid> 
+                                                    </wm-container> 
+                                                </wm-gridcolumn> 
+                                            </wm-gridrow> 
+                                        </wm-layoutgrid> 
+                                    </wm-panel> 
+                                </wm-panel> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn padding="5px unset unset unset" name="gridcolumn85" columnwidth="6"></wm-gridcolumn> 
+                        </wm-gridrow> 
+                        <wm-gridrow name="gridrow34_1"> 
+                            <wm-gridcolumn class="panel-info" name="gridcolumn78_1" columnwidth="6"> 
+                                <wm-table pagesize="12" class="panel-primary" multiselect="false" navigationalign="center" showrecordcount="true" spacing="condensed" name="gridLOV" navigation="Classic" dataset="bind:Variables.svOC1000PK0_FREIGHTGetAllLOV.dataSet.poutAllLov" title=""> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="70px" caption="" binding="itemcod"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="70px" caption="" binding="itemdes"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="70px" caption="" binding="itemdes2"></wm-table-column> 
+                                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="70px" caption="" binding="itemdes3"></wm-table-column> 
+                                </wm-table> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn name="gridcolumn84_1" columnwidth="6"></wm-gridcolumn> 
+                        </wm-gridrow> 
+                    </wm-layoutgrid> 
+                </wm-tabpane> 
+            </wm-tabs> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer name="footer1" content="footer"></wm-footer> 
+    <wm-view name="view1" class="dialog-view"> 
+        <wm-dialog closable="false" name="dialogInsertFreightDetails" dialogtype="design-dialog" modal="true" title="Insert Freight Details" iconclass="wi wi-file-text"> 
+            <wm-dialogactions name="dialogactions1"> 
+                <wm-button name="button1" class="btn-primary" caption="Close" on-click="closeDialog()"></wm-button> 
+            </wm-dialogactions> 
+            <wm-form postmessage="" class="panel-info" name="formInsertFreightDetails" captionalign="left" dataset="bind:Variables.svOC1000PK0_FREIGHTInsFreightDetails.dataSet" method="get" errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded"> 
+                <wm-layoutgrid name="layoutgrid6" columns="1"> 
+                    <wm-gridrow name="gridrow21_1"> 
+                        <wm-gridcolumn name="gridcolumn32" columnwidth="12"> 
+                            <wm-layoutgrid name="layoutgrid2"> 
+                                <wm-gridrow name="gridrow3"> 
+                                    <wm-gridcolumn name="gridcolumn5" columnwidth="5"> 
+                                        <wm-label width="auto" caption="From Country :" name="lblFromCountry" class="col-md-3 control-label"></wm-label> 
+                                    </wm-gridcolumn> 
+                                    <wm-gridcolumn name="gridcolumn6" columnwidth="7"> 
+                                        <wm-composite name="composite2"> 
+                                            <wm-container name="container2" class="col-md-9"> 
+                                                <wm-select orderby="itemcod:asc" displayfield="itemcod" datavalue="bind:Widgets.formFreightQuery.formWidgets.lbltxtFromCountry.caption" width="auto" datafield="itemcod" dataset="bind:Variables.svRF2000PK0_ORLOVGetOrdCtycodLOV.dataSet.poutOrderCtycodLov" height="25" name="selectFromCountry"></wm-select> 
+                                            </wm-container> 
+                                        </wm-composite> 
+                                    </wm-gridcolumn> 
+                                </wm-gridrow> 
+                                <wm-gridrow name="gridrow12"> 
+                                    <wm-gridcolumn name="gridcolumn23" columnwidth="5"> 
+                                        <wm-label width="auto" caption="To Destination Country :" name="lblToDestCountry" class="col-md-3 control-label"></wm-label> 
+                                    </wm-gridcolumn> 
+                                    <wm-gridcolumn name="gridcolumn24" columnwidth="7"> 
+                                        <wm-search datavalue="bind:Widgets.formFreightQuery.formWidgets.lbltxtToCountry.caption" name="searchToDestCountry" height="25" width="100" orderby="ctycod:asc" datafield="ctycod" displaylabel="ctycod" dataset="bind:Variables.svRF2000PK0_OCLOVGetAllCountryLOV.dataSet.poutCtycodLov" placeholder="Type ..." type="autocomplete"></wm-search> 
+                                    </wm-gridcolumn> 
+                                </wm-gridrow> 
+                                <wm-gridrow name="gridrow13"> 
+                                    <wm-gridcolumn name="gridcolumn25" columnwidth="5"> 
+                                        <wm-label width="auto" caption="Shipment Type :" name="lblShipmentType" class="col-md-3 control-label"></wm-label> 
+                                    </wm-gridcolumn> 
+                                    <wm-gridcolumn name="gridcolumn26" columnwidth="7"> 
+                                        <wm-composite name="composite4"> 
+                                            <wm-container name="container4" class="col-md-9"> 
+                                                <wm-select datavalue="bind:Widgets.formFreightQuery.formWidgets.lbltxtShpTyp.caption" width="auto" orderby="itemcod:asc,shptypcod:asc" displayfield="shptypcod" datafield="shptypcod" dataset="bind:Variables.svRF2000PK0_OCLOVGetShpTypLOV.dataSet.poutShptypLov" height="25" name="selectShipmentType"></wm-select> 
+                                            </wm-container> 
+                                        </wm-composite> 
+                                    </wm-gridcolumn> 
+                                </wm-gridrow> 
+                                <wm-gridrow name="gridrow14"> 
+                                    <wm-gridcolumn name="gridcolumn27" columnwidth="5"> 
+                                        <wm-label width="auto" caption="Shipment Destination :" name="lblShipmentDest" class="col-md-3 control-label"></wm-label> 
+                                    </wm-gridcolumn> 
+                                    <wm-gridcolumn name="gridcolumn28" columnwidth="7"> 
+                                        <wm-composite name="composite5"> 
+                                            <wm-container name="container5" class="col-md-9"> 
+                                                <wm-select width="auto" orderby="itemcod:asc,shpdestcod:asc" displayfield="shpdestcod" datafield="shpdestcod" dataset="bind:Variables.svRF2000PK0_OCLOVGetShpDestLOV.dataSet.poutShpDestLov" height="25" name="selectShipmentDest"></wm-select> 
+                                            </wm-container> 
+                                        </wm-composite> 
+                                    </wm-gridcolumn> 
+                                </wm-gridrow> 
+                                <wm-gridrow name="gridrow15"> 
+                                    <wm-gridcolumn name="gridcolumn29" columnwidth="5"> 
+                                        <wm-label width="auto" caption="Container Type :" name="lblContainerType" class="col-md-3 control-label"></wm-label> 
+                                    </wm-gridcolumn> 
+                                    <wm-gridcolumn name="gridcolumn30" columnwidth="7"> 
+                                        <wm-composite name="composite6"> 
+                                            <wm-container name="container6" class="col-md-9"> 
+                                                <wm-select width="auto" orderby="itemcod:asc,shpcontcod:asc" displayfield="shpcontcod" datafield="shpcontcod" dataset="bind:Variables.svRF2000PK0_OCLOVGetShpContLOV.dataSet.poutShpContLov" height="25" name="selectContainerType"></wm-select> 
+                                            </wm-container> 
+                                        </wm-composite> 
+                                    </wm-gridcolumn> 
+                                </wm-gridrow> 
+                            </wm-layoutgrid> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                </wm-layoutgrid> 
+                <wm-buttongroup name="buttongroup2" horizontalalign="right" class="form-action col-md-12"> 
+                    <wm-button on-click="btnSaveFreightDetailsClick($event, $scope)" iconclass="wi wi-save" name="btnSaveFreightDetails" caption="Save" type="button" class="btn-success"></wm-button> 
+                    <wm-button on-click="btnResetFreightDetailsClick($event, $scope)" name="btnResetFreightDetails" caption="Reset" type="button" class="btn-warning"></wm-button> 
+                </wm-buttongroup> 
+            </wm-form> 
+        </wm-dialog> 
+    </wm-view> 
+    <wm-view name="view2" class="dialog-view"> 
+        <wm-dialog name="dialogUpdateFreightDetails" dialogtype="design-dialog" modal="true" title="Upldate Freight Detail" iconclass="wi wi-file-text"> 
+            <wm-dialogactions name="dialogactions2"> 
+                <wm-button name="btnUpdateFreightDetails" class="btn-default btn-info" caption="Update" type="button" margin="unset 0.5em"></wm-button> 
+                <wm-button name="button3" class="btn-primary" caption="Close" on-click="closeDialog()"></wm-button> 
+            </wm-dialogactions> 
+            <wm-layoutgrid name="layoutgrid3"> 
+                <wm-gridrow name="gridrow19"> 
+                    <wm-gridcolumn name="gridcolumn36" columnwidth="4"> 
+                        <wm-label name="lblFreightUpCountry" width="100" caption="From Country :" class="col-md-3 control-label"></wm-label> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn name="gridcolumn37" columnwidth="8"> 
+                        <wm-composite name="composite7"> 
+                            <wm-container name="container7" class="col-md-9"> 
+                                <wm-select width="auto" orderby="itemcod:asc" displayfield="itemcod" datafield="itemcod" dataset="bind:Variables.svRF2000PK0_ORLOVGetOrdCtycodLOV.dataSet.poutOrderCtycodLov" height="25" datavalue="bind:Widgets.gridFreightDetails.selecteditem.ctycod" name="selectFreightUpCountry"></wm-select> 
+                            </wm-container> 
+                        </wm-composite> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+                <wm-gridrow name="gridrow20"> 
+                    <wm-gridcolumn name="gridcolumn38" columnwidth="4"> 
+                        <wm-label name="lblUpToDestCountry" width="150" caption="To Destination Country :" class="col-md-3 control-label"></wm-label> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn name="gridcolumn39" columnwidth="8"> 
+                        <wm-search height="25" width="100" datavalue="bind:Widgets.gridFreightDetails.selecteditem.shpdestctycod" orderby="ctycod:asc" datafield="All Fields" displaylabel="ctycod" dataset="bind:Variables.svRF2000PK0_OCLOVGetAllCountryLOV.dataSet.poutCtycodLov" placeholder="Type ..." type="autocomplete" name="searchUpToDestCountry"></wm-search> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+                <wm-gridrow name="gridrow21"> 
+                    <wm-gridcolumn name="gridcolumn40" columnwidth="4"> 
+                        <wm-label name="lblUpShipmentType" width="100" caption="Shipment Type :" class="col-md-3 control-label"></wm-label> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn name="gridcolumn41" columnwidth="8"> 
+                        <wm-composite name="composite9"> 
+                            <wm-container name="container9" class="col-md-9"> 
+                                <wm-select orderby="itemcod:asc,shptypcod:asc" displayfield="shptypcod" datafield="shptypcod" dataset="bind:Variables.svRF2000PK0_OCLOVGetShpTypLOV.dataSet.poutShptypLov" width="auto" datavalue="bind:Widgets.gridFreightDetails.selecteditem.shptyp" height="25" name="selectUpShipmentType"></wm-select> 
+                            </wm-container> 
+                        </wm-composite> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+                <wm-gridrow name="gridrow22"> 
+                    <wm-gridcolumn name="gridcolumn42" columnwidth="4"> 
+                        <wm-label name="lblUpShipmentDest" width="200" caption="Shipment Destination :" class="col-md-3 control-label"></wm-label> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn name="gridcolumn43" columnwidth="8"> 
+                        <wm-composite name="composite10"> 
+                            <wm-container name="container10" class="col-md-9"> 
+                                <wm-select width="auto" orderby="itemcod:asc,shpdestcod:asc" displayfield="shpdestcod" datafield="shpdestcod" dataset="bind:Variables.svRF2000PK0_OCLOVGetShpDestLOV.dataSet.poutShpDestLov" datavalue="bind:Widgets.gridFreightDetails.selecteditem.shpdest" height="25" name="selectUpShipmentDest"></wm-select> 
+                            </wm-container> 
+                        </wm-composite> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+                <wm-gridrow name="gridrow23"> 
+                    <wm-gridcolumn name="gridcolumn44" columnwidth="4"> 
+                        <wm-label name="lblUpContainerType" width="100" caption="Container Type :" class="col-md-3 control-label"></wm-label> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn name="gridcolumn45" columnwidth="8"> 
+                        <wm-composite name="composite11"> 
+                            <wm-container name="container11" class="col-md-9"> 
+                                <wm-select orderby="itemcod:asc,shpcontcod:asc" displayfield="shpcontcod" datafield="shpcontcod" dataset="bind:Variables.svRF2000PK0_OCLOVGetShpContLOV.dataSet.poutShpContLov" width="auto" datavalue="bind:Widgets.gridFreightDetails.selecteditem.containerType" height="25" name="selectUpContainerType"></wm-select> 
+                            </wm-container> 
+                        </wm-composite> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+            </wm-layoutgrid> 
+        </wm-dialog> 
+    </wm-view> 
+    <wm-view name="view3" class="dialog-view"> 
+        <wm-alertdialog on-close="variableOnClose()" on-ok="variableOnOk()" alerttype="{{notification.alerttype}}" oktext="{{notification.okButtonText}}" title="{{notification.title}}" message="{{notification.text}}" notificationdialog="alert" controller="NotificationDialogController" name="notificationalertdialog"></wm-alertdialog> 
+    </wm-view> 
+    <wm-view name="view4" class="dialog-view"> 
+        <wm-dialog width="800" name="dialogInsertCostDetails" dialogtype="design-dialog" modal="true" title="Insert Cost and Freight Details" iconclass="wi wi-file-text"> 
+            <wm-form postmessage="" class="panel-info" name="formInsertCostDetails" captionalign="left" dataset="bind:Variables.svOC1000PK0_FREIGHTInsCostDetails.dataSet" method="get" errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded"> 
+                <wm-layoutgrid name="layoutgrid7" columns="1"> 
+                    <wm-gridrow name="gridrow17"> 
+                        <wm-gridcolumn name="gridcolumn30_1" columnwidth="3"> 
+                            <wm-form-field defaultvalue="bind:Widgets.formCostQuery.formWidgets.lbltxtFromCountryCost.caption" margin="unset unset unset 8px" width="auto" height="25" placeholder="" orderby="itemcod:asc" displayfield="itemcod" datafield="itemcod" dataset="bind:Variables.svRF2000PK0_ORLOVGetOrdCtycodLOV.dataSet.poutOrderCtycodLov" show="true" widget="select" displayname="From Country :" type="string" key="pCtycod" name="pCtycod"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn31" columnwidth="3"> 
+                            <wm-form-field width="100" defaultvalue="bind:Widgets.formCostQuery.formWidgets.lbltxtToCountryCost.caption" orderby="ctycod:asc" datafield="ctycod" displaylabel="ctycod" dataset="bind:Variables.svRF2000PK0_OCLOVGetAllCountryLOV.dataSet.poutCtycodLov" placeholder="Type ..." show="true" widget="autocomplete" displayname="To Destination Country :" type="string" key="pShpdestctycod" name="pShpdestctycod"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn50" columnwidth="3"> 
+                            <wm-form-field defaultvalue="bind:Widgets.formCostQuery.formWidgets.lbltxtShpTypCost.caption" margin="unset unset unset 8px" width="auto" height="25" placeholder="" orderby="shptypcod:asc,shptypcost:asc" displayfield="shptypcost" datafield="shptypcost" dataset="bind:Variables.svRF2000PK0_OCLOVGetShpTypCostLOV.dataSet.poutShptypcostLov" show="true" widget="select" displayname="Shipment Type Cost Bdown:" type="string" key="pShpTyp" name="pShpTyp"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn65" columnwidth="3"> 
+                            <wm-form-field margin="unset unset unset 8px" width="auto" height="25" placeholder="" displayfield="allshpdestcod" datafield="allshpdestcod" orderby="allshpdestcod:asc" dataset="bind:Variables.svRF2000PK0_OCLOVGetAllShpDestLOV.dataSet.poutAllShpDestLov" show="true" widget="select" displayname="Shipment Destination :" type="string" key="pShpdest" name="pShpdest"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow1"> 
+                        <wm-gridcolumn name="gridcolumn32_1" columnwidth="3"> 
+                            <wm-form-field margin="unset unset unset 8px" width="auto" height="25" placeholder="" orderby="shpcontcod:asc" displayfield="shpcontcod" datafield="shpcontcod" dataset="bind:Variables.svRF2000PK0_OCLOVGetShpContLOV.dataSet.poutShpContLov" show="true" widget="select" displayname="Container Type :" type="string" key="pContainerTpy" name="pContainerTpy"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn52" columnwidth="3"> 
+                            <wm-form-field margin="unset unset unset 8px" width="auto" height="25" placeholder="" orderby="itemcat:asc" displayfield="itemcat" datafield="itemcat" dataset="bind:Variables.svRF2000PK0_OCLOVGetItemCatLOV.dataSet.poutItemCatLov" show="true" widget="select" displayname="Item Category :" type="string" key="pItemcat" name="pItemcat"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn66" columnwidth="6"> 
+                            <wm-form-field margin="unset unset unset 8px" width="auto" height="25" inputtype="text" placeholder="Enter Item Description" show="true" widget="text" displayname="Item Description :" type="string" key="pItemdes" name="pItemdes"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow28_1"> 
+                        <wm-gridcolumn name="gridcolumn60" columnwidth="3"> 
+                            <wm-form-field on-change="pCalcMethodChange($event, $scope, newVal, oldVal)" margin="unset unset unset 8px" width="auto" height="25" orderby="calcmethod:asc" displayfield="calcmethod" datafield="All Fields" dataset="bind:Variables.svRF2000PK0_OCLOVGetCalcMethodLOV.dataSet.poutCalcMethodLov" placeholder="" show="true" widget="select" displayname="Calculation Method :" type="string" key="pCalcMethod" name="pCalcMethod"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn61" columnwidth="3"> 
+                            <wm-form-field margin="unset unset unset 8px" width="auto" on-change="pQtyUOMChange($event, $scope, newVal, oldVal)" height="25" placeholder="" orderby="qtyuom:asc" displayfield="qtyuom" datafield="All Fields" dataset="bind:Variables.svRF2000PK0_OCLOVGetQtyUomLOV.dataSet.poutQtyUomLov" show="true" widget="select" displayname="Quantity UOM :" type="string" key="pQtyUOM" name="pQtyUOM"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn63" columnwidth="3"></wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn64" columnwidth="3"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow31"> 
+                        <wm-gridcolumn name="gridcolumn71" columnwidth="3"> 
+                            <wm-label fontsize="13" name="lblItemCost" fontweight="bold" caption="Item Cost :" padding="unset 0.5em"></wm-label> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn72" columnwidth="3"></wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn73" columnwidth="3"></wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn74" columnwidth="3"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow18_1"> 
+                        <wm-gridcolumn name="gridcolumn33" columnwidth="3"> 
+                            <wm-form-field margin="unset unset unset 8px" width="auto" height="25" orderby="ccycod:asc" displayfield="currency" datafield="currency" dataset="bind:Variables.svRF2000PK0_OCLOVGetCurrencyLOV.dataSet.poutCurrencyLov" placeholder="" show="true" widget="select" displayname="Currency Code :" type="string" key="pCurrencyCod" name="pCurrencyCod"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn34" columnwidth="3"> 
+                            <wm-container show="false" name="containerHideEqualPC"> 
+                                <wm-form-field minvalue="0" textalign="right" margin="unset unset unset 8px" width="100" height="25" placeholder="" inputtype="number" show="true" widget="number" displayname="Charges Per UOM (CUR) :" type="integer" key="pCurPerUnit" name="pCurPerUnit"></wm-form-field> 
+                            </wm-container> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn51" columnwidth="4"> 
+                            <wm-form-field minvalue="0" defaultvalue="0" textalign="right" margin="unset unset unset 8px" width="100" height="25" placeholder="" inputtype="number" show="true" widget="number" displayname="Miminum charge for Item (CUR) :" type="integer" key="pCurperitem" name="pCurperitem"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn67" columnwidth="2"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow23_1"> 
+                        <wm-gridcolumn name="gridcolumn55" columnwidth="6"> 
+                            <wm-container show="false" name="containerQuantityRange"> 
+                                <wm-layoutgrid name="layoutgrid10"> 
+                                    <wm-gridrow name="gridrow33_1"> 
+                                        <wm-gridcolumn name="gridcolumn74_1" columnwidth="6"> 
+                                            <wm-label fontsize="13" fontweight="bold" caption="Quantity Range :" name="lblQuantityTitle" padding="unset 0.5em"></wm-label> 
+                                        </wm-gridcolumn> 
+                                        <wm-gridcolumn name="gridcolumn75_1" columnwidth="6"></wm-gridcolumn> 
+                                    </wm-gridrow> 
+                                    <wm-gridrow name="gridrow29"> 
+                                        <wm-gridcolumn name="gridcolumn65_1" columnwidth="6"> 
+                                            <wm-form-field minvalue="0" textalign="right" margin="unset unset unset 8px" width="100" height="25" placeholder="" inputtype="number" show="true" widget="number" displayname="From ( >= ) :" type="integer" key="pQtyFrom" name="pQtyFrom"></wm-form-field> 
+                                        </wm-gridcolumn> 
+                                        <wm-gridcolumn name="gridcolumn66_1" columnwidth="6"> 
+                                            <wm-form-field minvalue="0" textalign="right" margin="unset unset unset 8px" width="100" height="25" placeholder="" inputtype="number" show="true" widget="number" displayname="To ( < ) :" type="integer" key="pQtyTo" name="pQtyTo"></wm-form-field> 
+                                        </wm-gridcolumn> 
+                                    </wm-gridrow> 
+                                </wm-layoutgrid> 
+                            </wm-container> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn43_1" columnwidth="6"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow35"> 
+                        <wm-gridcolumn name="gridcolumn81_1" columnwidth="6"> 
+                            <wm-container show="false" name="containerPercentage"> 
+                                <wm-layoutgrid name="layoutgrid9"> 
+                                    <wm-gridrow name="gridrow34"> 
+                                        <wm-gridcolumn name="gridcolumn76_1" columnwidth="7"> 
+                                            <wm-label fontsize="13" name="lblCalculationTitle" fontweight="bold" caption="Calculation Percentage :" padding="unset 0.5em"></wm-label> 
+                                        </wm-gridcolumn> 
+                                        <wm-gridcolumn name="gridcolumn77_1" columnwidth="5"></wm-gridcolumn> 
+                                    </wm-gridrow> 
+                                    <wm-gridrow name="gridrow26_2"> 
+                                        <wm-gridcolumn name="gridcolumn58_1" columnwidth="6"> 
+                                            <wm-form-field minvalue="0" textalign="right" width="100" margin="unset unset unset 8px" height="25" placeholder="" inputtype="number" show="true" widget="number" displayname="Calculation Percent( % ) :" type="integer" key="pCalcPercent" name="pCalcPercent"></wm-form-field> 
+                                        </wm-gridcolumn> 
+                                        <wm-gridcolumn name="gridcolumn59" columnwidth="6"> 
+                                            <wm-form-field orderby="calctotal:asc" width="auto" margin="unset unset unset 8px" displayfield="calctotal" datafield="calctotal" dataset="bind:Variables.statCalcTotal.dataSet" height="25" placeholder="" show="true" widget="select" displayname="Base on Sub Total :" type="string" key="pCalcSubTotalTyp" name="pCalcSubTotalTyp"></wm-form-field> 
+                                        </wm-gridcolumn> 
+                                    </wm-gridrow> 
+                                </wm-layoutgrid> 
+                            </wm-container> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn82" columnwidth="6"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow1"> 
+                        <wm-gridcolumn name="gridcolumn1" columnwidth="6"> 
+                            <wm-form-field displayfield="calctotal" datafield="calctotal" orderby="calctotal:asc" margin="unset unset unset 8px" width="auto" dataset="bind:Variables.statCalcTotal.dataSet" height="25" placeholder="" show="true" widget="select" displayname="Use Item  in Sub Total Calcultaion :" type="string" key="pSubtotalTyp" name="pSubtotalTyp"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn69" columnwidth="6"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                </wm-layoutgrid> 
+                <wm-buttongroup name="buttongroup2_1" horizontalalign="right" class="form-action col-md-12"> 
+                    <wm-button on-click="btnSaveCostDetailsClick($event, $scope)" iconclass="wi wi-save" name="btnSaveCostDetails" caption="Save" type="button" class="btn-success"></wm-button> 
+                    <wm-button on-click="btnResetCostDetailsClick($event, $scope)" name="btnResetCostDetails" caption="Reset" type="button" class="btn-warning"></wm-button> 
+                </wm-buttongroup> 
+            </wm-form> 
+            <wm-dialogactions name="dialogactions3"> 
+                <wm-button name="button6" class="btn-primary" caption="Close" on-click="closeDialog()"></wm-button> 
+            </wm-dialogactions> 
+        </wm-dialog> 
+    </wm-view> 
+    <wm-view name="view5" class="dialog-view"> 
+        <wm-dialog width="800" name="dialogUpdateCostDetails" dialogtype="design-dialog" modal="true" title="Update" iconclass="wi wi-file-text"> 
+            <wm-dialogactions name="dialogactions4"> 
+                <wm-button name="button13" class="btn-primary" caption="Close" on-click="closeDialog()"></wm-button> 
+            </wm-dialogactions> 
+            <wm-form postmessage="" class="panel-info" name="formUpdateCost" captionalign="left" dataset="bind:Variables.svOC1000PK0_FREIGHTUpdCostDetails.dataSet" method="get" errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded"> 
+                <wm-layoutgrid name="layoutgrid14_1" columns="1"> 
+                    <wm-gridrow name="gridrow50"> 
+                        <wm-gridcolumn name="gridcolumn106" columnwidth="3"> 
+                            <wm-form-field defaultvalue="bind:Widgets.gridCostDetails.selecteditem.sortseq" margin="unset unset unset 8px" placeholder="" width="100" height="25" show="true" widget="number" displayname="Sort Seq :" type="integer" key="pSortseq" name="pSortseq"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn107_1" columnwidth="3"></wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn108" columnwidth="3"></wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn109" columnwidth="3"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow36_1"> 
+                        <wm-gridcolumn name="gridcolumn83" columnwidth="3"> 
+                            <wm-form-field margin="unset unset unset 8px" width="100" height="25" defaultvalue="bind:Widgets.gridCostDetails.selecteditem.ctycod" placeholder="" inputtype="text" readonly="true" displayname="From Country :" key="pCtycod" type="string" show="true" widget="text" name="pCtycod"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn98" columnwidth="3"> 
+                            <wm-form-field margin="unset unset unset 8px" height="25" width="100" defaultvalue="bind:Widgets.gridCostDetails.selecteditem.shpdestctycod" placeholder="" inputtype="text" readonly="true" displayname="To Destination Country :" key="pShpdestctycod" type="string" show="true" widget="text" name="pShpdestctycod"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn99" columnwidth="3"> 
+                            <wm-form-field margin="unset unset unset 8px" height="25" width="100" defaultvalue="bind:Widgets.gridCostDetails.selecteditem.shptyp" placeholder="" inputtype="text" readonly="true" displayname="Shipment Type Cost Bdown :" key="pShptyp" type="string" show="true" widget="text" name="pShptyp"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn100" columnwidth="3"> 
+                            <wm-composite name="composite16_1"> 
+                                <wm-label width="100%" caption="Shipment Destination :" name="lblShipmentDestination" class="col-md-3 control-label"></wm-label> 
+                                <wm-container name="container25" class="col-md-9"> 
+                                    <wm-label height="25" backgroundcolor="#DDDDDD" margin="unset unset unset 8px" class="displayField" caption="bind:Widgets.gridCostDetails.selecteditem.shpdest" name="txtShipmentDestination" padding="unset 0.5em"></wm-label> 
+                                </wm-container> 
+                            </wm-composite> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow37"> 
+                        <wm-gridcolumn name="gridcolumn84" columnwidth="3"> 
+                            <wm-composite name="composite14"> 
+                                <wm-label width="100%" caption="Container Type :" name="lblcostContainerType" class="col-md-3 control-label"></wm-label> 
+                                <wm-container name="container23_1" class="col-md-9"> 
+                                    <wm-label height="25" backgroundcolor="#DDDDDD" margin="unset unset unset 8px" class="displayField" caption="bind:Widgets.gridCostDetails.selecteditem.containerType" name="txtcostContainerType" padding="unset 0.5em"></wm-label> 
+                                </wm-container> 
+                            </wm-composite> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn113" columnwidth="3"> 
+                            <wm-composite name="composite15"> 
+                                <wm-label width="100%" caption="Item Category :" name="lblItemCategory" class="col-md-3 control-label"></wm-label> 
+                                <wm-container name="container24_1" class="col-md-9"> 
+                                    <wm-label height="25" backgroundcolor="#DDDDDD" margin="unset unset unset 8px" class="displayField" caption="bind:Widgets.gridCostDetails.selecteditem.itemcat" name="txttemCategory" padding="unset 0.5em"></wm-label> 
+                                </wm-container> 
+                            </wm-composite> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn114" columnwidth="6"> 
+                            <wm-form-field defaultvalue="bind:Widgets.gridCostDetails.selecteditem.itemdes" margin="unset unset unset 8px" height="25" width="auto" placeholder="Enter Item Description" inputtype="text" readonly="false" displayname="Item Description :" key="pItemdes" type="string" show="true" widget="text" name="pItemdes"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow52"> 
+                        <wm-gridcolumn name="gridcolumn111_4" columnwidth="3"> 
+                            <wm-form-field on-change="pCalcmethodChange($event, $scope, newVal, oldVal)" orderby="calcmethod:asc" displayfield="calcmethod" datafield="All Fields" height="25" width="auto" dataset="bind:Variables.svRF2000PK0_OCLOVGetCalcMethodLOVUpd.dataSet.poutCalcMethodLov" margin="unset unset unset 8px" placeholder="" readonly="false" displayname="Calculation Method :" key="pCalcmethod" type="string" show="true" widget="select" name="pCalcmethod"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn112_2" columnwidth="3"> 
+                            <wm-form-field on-change="pQtyUomChange($event, $scope, newVal, oldVal)" orderby="qtyuom:asc" displayfield="qtyuom" datafield="All Fields" dataset="bind:Variables.svRF2000PK0_OCLOVGetQtyUomLOVUpd.dataSet.poutQtyUomLov" width="auto" height="25" margin="unset unset unset 8px" placeholder="" readonly="false" displayname="Quantity UOM :" key="pQtyUom" type="string" show="true" widget="select" name="pQtyUom"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn113_2" columnwidth="3"></wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn114_3" columnwidth="3"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow60"> 
+                        <wm-gridcolumn name="gridcolumn144" columnwidth="3"> 
+                            <wm-label name="label27" fontsize="13" fontweight="bold" caption="Item Cost :" padding="unset 0.5em"></wm-label> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn118" columnwidth="3"></wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn119" columnwidth="3"></wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn117_1" columnwidth="3"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow38"> 
+                        <wm-gridcolumn name="gridcolumn116" columnwidth="3"> 
+                            <wm-form-field defaultvalue="bind:Widgets.gridCostDetails.selecteditem.ccycod" orderby="currency:asc" displayfield="currency" datafield="currency" dataset="bind:Variables.svRF2000PK0_OCLOVGetCurrencyLOVUpd.dataSet.poutCurrencyLov" margin="unset unset unset 8px" height="25" width="auto" placeholder="" readonly="false" displayname="Currency Code :" key="pCurrency" type="string" show="true" widget="select" name="pCurrency"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn135" columnwidth="3"> 
+                            <wm-container show="false" name="containerHideEqualPCUpd"> 
+                                <wm-form-field minvalue="0" margin="unset unset unset 8px" defaultvalue="bind:Widgets.gridCostDetails.selecteditem.curperunit" textalign="right" height="25" width="100" placeholder="" inputtype="number" show="true" widget="number" displayname="Charges Per UOM (CUR) :" type="number" key="pCurperunit" name="pCurperunit"></wm-form-field> 
+                            </wm-container> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn140" columnwidth="4"> 
+                            <wm-form-field minvalue="0" defaultvalue="bind:Widgets.gridCostDetails.selecteditem.curperitemMinimum" textalign="right" height="25" width="100" margin="unset unset unset 8px" placeholder="" inputtype="number" readonly="false" displayname="Miminum charge for Item (CUR) :" key="pCurperitem" type="number" show="true" widget="number" name="pCurperitem"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow39"> 
+                        <wm-gridcolumn name="gridcolumn86_1" columnwidth="6"> 
+                            <wm-container show="false" name="containerQuantityUpdate"> 
+                                <wm-layoutgrid name="layoutgrid15"> 
+                                    <wm-gridrow name="gridrow59"> 
+                                        <wm-gridcolumn name="gridcolumn142" columnwidth="6"> 
+                                            <wm-label name="lblQuantityRangeUpd" fontsize="13" fontweight="bold" caption="Quantity Range :" padding="unset 0.5em"></wm-label> 
+                                        </wm-gridcolumn> 
+                                    </wm-gridrow> 
+                                    <wm-gridrow name="gridrow55"> 
+                                        <wm-gridcolumn name="gridcolumn124" columnwidth="6"> 
+                                            <wm-form-field minvalue="0" defaultvalue="bind:Widgets.gridCostDetails.selecteditem.qtyfrom" height="25" width="100" textalign="right" margin="unset unset unset 8px" placeholder="" inputtype="number" readonly="false" displayname="From ( >= ) :" key="pQtyfrom" type="number" show="true" widget="number" name="pQtyfrom"></wm-form-field> 
+                                        </wm-gridcolumn> 
+                                        <wm-gridcolumn name="gridcolumn125" columnwidth="6"> 
+                                            <wm-form-field minvalue="0" defaultvalue="bind:Widgets.gridCostDetails.selecteditem.qtyto" textalign="right" height="25" width="100" margin="unset unset unset 8px" placeholder="" inputtype="number" readonly="false" displayname="To ( < ) :" key="pQtyto" type="number" show="true" widget="number" name="pQtyto"></wm-form-field> 
+                                        </wm-gridcolumn> 
+                                    </wm-gridrow> 
+                                </wm-layoutgrid> 
+                            </wm-container> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn115" columnwidth="6"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow40"> 
+                        <wm-gridcolumn name="gridcolumn87" columnwidth="6"> 
+                            <wm-container show="false" name="containerPercentageUpd"> 
+                                <wm-layoutgrid name="layoutgrid16"> 
+                                    <wm-gridrow name="gridrow61"> 
+                                        <wm-gridcolumn name="gridcolumn148" columnwidth="7"> 
+                                            <wm-label name="lblPercentageUpd" fontsize="13" fontweight="bold" caption="Calculation Percentage :" padding="unset 0.5em"></wm-label> 
+                                        </wm-gridcolumn> 
+                                    </wm-gridrow> 
+                                    <wm-gridrow name="gridrow57"> 
+                                        <wm-gridcolumn name="gridcolumn129" columnwidth="6"> 
+                                            <wm-form-field minvalue="0" defaultvalue="bind:Widgets.gridCostDetails.selecteditem.calcPercent" textalign="right" height="25" width="100" margin="unset unset unset 8px" placeholder="" inputtype="number" readonly="false" displayname="Calculation Percent( % ) :" key="pCalcpercent" type="number" show="true" widget="number" name="pCalcpercent"></wm-form-field> 
+                                        </wm-gridcolumn> 
+                                        <wm-gridcolumn name="gridcolumn130" columnwidth="6"> 
+                                            <wm-form-field height="25" width="auto" defaultvalue="bind:Widgets.gridCostDetails.selecteditem.calcSubtotaltyp" orderby="calctotal:asc" displayfield="calctotal" datafield="calctotal" dataset="bind:Variables.statCalcTotal.dataSet" margin="unset unset unset 8px" placeholder="" readonly="false" displayname="Base on Sub Total :" key="pCalctotal" type="string" show="true" widget="select" name="pCalctotal"></wm-form-field> 
+                                        </wm-gridcolumn> 
+                                    </wm-gridrow> 
+                                </wm-layoutgrid> 
+                            </wm-container> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn116_3" columnwidth="6"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow41"> 
+                        <wm-gridcolumn name="gridcolumn88" columnwidth="6"> 
+                            <wm-form-field defaultvalue="bind:Widgets.gridCostDetails.selecteditem.subtotaltyp" orderby="calctotal:asc" displayfield="calctotal" datafield="calctotal" dataset="bind:Variables.statCalcTotal.dataSet" height="25" width="auto" margin="unset unset unset 8px" placeholder="" readonly="false" displayname="Use Item  in Sub Total Calcultaion :" key="pSubtotal" type="string" show="true" widget="select" name="pSubtotal"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn120" columnwidth="6"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                </wm-layoutgrid> 
+                <wm-form-field textalign="right" margin="unset unset unset 8px" width="100" height="25" defaultvalue="bind:Widgets.gridCostDetails.selecteditem.freightseqnr" placeholder="" inputtype="number" readonly="true" displayname="Freight ID :" key="pFreightseqnr" type="integer" show="false" widget="number" name="pFreightseqnr"></wm-form-field> 
+                <wm-buttongroup name="buttongroup6" horizontalalign="right" class="form-action col-md-12"> 
+                    <wm-button on-click="btnUpdateCostClick($event, $scope)" name="btnUpdateCost" caption="Update" type="button" class="btn-info"></wm-button> 
+                    <wm-button on-click="btnResertUpdCostClick($event, $scope)" show="true" name="btnResertUpdCost" caption="Reset" type="button" class="btn-warning"></wm-button> 
+                </wm-buttongroup> 
+            </wm-form> 
+        </wm-dialog> 
+    </wm-view> 
+    <wm-view name="view6" class="dialog-view"> 
+        <wm-confirmdialog iconclass="wi wi-delete fa-lg" on-ok="confirmdialogFreightDeleteOk($event, $scope)" oktext="Yes" canceltext="No" message="Are you sure you want delete this ?" title="Delete Record" name="confirmdialogFreightDelete"></wm-confirmdialog> 
+    </wm-view> 
+    <wm-view name="view7" class="dialog-view"> 
+        <wm-confirmdialog on-ok="confirmdialogCostDeleteOk($event, $scope)" oktext="Yes" canceltext="No" iconclass="wi wi-cancel" message="Are you sure you want to cancel this?" title="Cancel Record" name="confirmdialogCostDelete"></wm-confirmdialog> 
+    </wm-view> 
+</wm-page>

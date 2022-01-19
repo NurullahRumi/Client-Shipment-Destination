@@ -1,0 +1,97 @@
+[ {
+  "name" : "admin",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "Main"
+  }
+}, {
+  "name" : "FREIGHT_VIEW_PAGE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "FreightStandardCost"
+  }
+}, {
+  "name" : "CLIENT_CREATE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "ClientShipmentDestination"
+  }
+}, {
+  "name" : "CLIENT_DEL",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "ClientShipmentDestination"
+  }
+}, {
+  "name" : "CLIENT_UPD",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "ClientShipmentDestination"
+  }
+}, {
+  "name" : "CLIENT_VIEW_PAGE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "ClientShipmentDestination"
+  }
+}, {
+  "name" : "FREIGHT_COST_CREATE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "FreightStandardCost"
+  }
+}, {
+  "name" : "FREIGHT_COST_UPD",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "FreightStandardCost"
+  }
+}, {
+  "name" : "FREIGHT_COST_CANCEL",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "FreightStandardCost"
+  }
+}, {
+  "name" : "FREIGHT_SHIPMENT_CREATE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "FreightStandardCost"
+  }
+}, {
+  "name" : "FREIGHT_SHIPMENT_DEL",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "FreightStandardCost"
+  }
+}, {
+  "name" : "FREIGHT_SHIPMENT_UPD",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "FreightStandardCost"
+  }
+}, {
+  "name" : "FREIGHT_TERM_CREATE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "FreightStandardCost"
+  }
+}, {
+  "name" : "FREIGHT_TERM_DEL",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "FreightStandardCost"
+  }
+}, {
+  "name" : "FREIGHT_TERM_UPD",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "FreightStandardCost"
+  }
+}, {
+  "name" : "LOV_VIEW_PAGE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "ListOfValues"
+  }
+} ]

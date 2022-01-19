@@ -1,0 +1,26 @@
+[ {
+  "urlPattern" : "/pages/ClientShipmentDestination/**",
+  "permission" : "Role",
+  "roles" : [ "CLIENT_VIEW_PAGE" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/FreightStandardCost/**",
+  "permission" : "Role",
+  "roles" : [ "FREIGHT_VIEW_PAGE" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/ListOfValues/**",
+  "permission" : "Role",
+  "roles" : [ "LOV_VIEW_PAGE" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Login/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/**",
+  "permission" : "Authenticated",
+  "roles" : null,
+  "httpMethod" : null
+} ]
